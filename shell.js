@@ -89,19 +89,29 @@ document.body.append(mobileTopbar, backdrop);
 
 
 function openMobileMenu() {
-    document.body.classList.add('mobile-nav-open');
+    document.body.classList.add('mobile-nav-open')
 
-    menuButton.textContent = '×';
+    menuButton.textContent = '×'
 
     menuButton.setAttribute(
         'aria-label',
         'Close menu'
-    );
+    )
 
     menuButton.setAttribute(
         'aria-expanded',
         'true'
-    );
+    )
+
+    /* Always open sidebar at the first menu item */
+    sidebar.scrollTop = 0
+
+    const sidebarNav =
+        sidebar.querySelector('.sidebar-nav')
+
+    if (sidebarNav) {
+        sidebarNav.scrollTop = 0
+    }
 }
 
 
