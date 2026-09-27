@@ -89,29 +89,41 @@ document.body.append(mobileTopbar, backdrop);
 
 
 function openMobileMenu() {
-    document.body.classList.add('mobile-nav-open')
+    document.body.classList.add('mobile-nav-open');
 
-    menuButton.textContent = '×'
+    menuButton.textContent = '×';
 
     menuButton.setAttribute(
         'aria-label',
         'Close menu'
-    )
+    );
 
     menuButton.setAttribute(
         'aria-expanded',
         'true'
-    )
+    );
+<<<<<<< Updated upstream
+=======
 
-    /* Always open sidebar at the first menu item */
-    sidebar.scrollTop = 0
+    /* Always reset drawer to the first menu item */
+    sidebar.scrollTop = 0;
 
     const sidebarNav =
-        sidebar.querySelector('.sidebar-nav')
+        sidebar.querySelector('.sidebar-nav');
 
     if (sidebarNav) {
-        sidebarNav.scrollTop = 0
+        sidebarNav.scrollTop = 0;
     }
+
+    /* Run once more after layout finishes */
+    requestAnimationFrame(() => {
+        sidebar.scrollTop = 0;
+
+        if (sidebarNav) {
+            sidebarNav.scrollTop = 0;
+        }
+    });
+>>>>>>> Stashed changes
 }
 
 
