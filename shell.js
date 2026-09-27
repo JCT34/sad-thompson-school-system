@@ -102,6 +102,28 @@ function openMobileMenu() {
         'aria-expanded',
         'true'
     );
+<<<<<<< Updated upstream
+=======
+
+    /* Always reset drawer to the first menu item */
+    sidebar.scrollTop = 0;
+
+    const sidebarNav =
+        sidebar.querySelector('.sidebar-nav');
+
+    if (sidebarNav) {
+        sidebarNav.scrollTop = 0;
+    }
+
+    /* Run once more after layout finishes */
+    requestAnimationFrame(() => {
+        sidebar.scrollTop = 0;
+
+        if (sidebarNav) {
+            sidebarNav.scrollTop = 0;
+        }
+    });
+>>>>>>> Stashed changes
 }
 
 
