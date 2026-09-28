@@ -1441,8 +1441,6 @@ button,
     flex: 1 1 120px;
 }
 
-<<<<<<< Updated upstream
-=======
 /* =========================================
    REGISTRAR MOBILE SIDEBAR SCROLL FIX
 ========================================= */
@@ -1622,7 +1620,6 @@ body.mobile-nav-open .app-sidebar {
 }
 
 /* =========================================
-<<<<<<< Updated upstream
    FINAL MOBILE SIDEBAR OVERRIDE
    Keep this as the LAST sidebar rule
 ========================================= */
@@ -1716,8 +1713,7 @@ body.mobile-nav-open.has-app-sidebar > .app-sidebar {
     box-sizing: border-box;
 }
 
->>>>>>> Stashed changes
-=======
+/* =========================================
    REGISTRAR ALL PAGES - TOP BAR FIX
 ========================================= */
 
@@ -1780,5 +1776,4 @@ main.main > section[data-panel]:not(.hidden) > .page-title:first-child {
     z-index: 1 !important;
 }
 
->>>>>>> Stashed changes
 }

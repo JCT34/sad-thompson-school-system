@@ -102,8 +102,6 @@ function openMobileMenu() {
         'aria-expanded',
         'true'
     );
-<<<<<<< Updated upstream
-=======
 
     /* Always reset drawer to the first menu item */
     sidebar.scrollTop = 0;
@@ -123,7 +121,6 @@ function openMobileMenu() {
             sidebarNav.scrollTop = 0;
         }
     });
->>>>>>> Stashed changes
 }
 
 
