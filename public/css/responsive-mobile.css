@@ -1619,4 +1619,161 @@ body.mobile-nav-open .app-sidebar {
     opacity: 1 !important;
 }
 
+/* =========================================
+   FINAL MOBILE SIDEBAR OVERRIDE
+   Keep this as the LAST sidebar rule
+========================================= */
+
+.app-sidebar,
+body.has-app-sidebar > .app-sidebar {
+    position: fixed !important;
+
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: min(78vw, 280px) !important;
+
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 86px 12px 16px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow: hidden !important;
+
+    background: #0b2f59 !important;
+    background-image: none !important;
+
+    box-sizing: border-box;
+
+    transform: translate3d(-105%, 0, 0) !important;
+
+    transition: transform 0.25s ease !important;
+
+    z-index: 1300 !important;
+}
+
+body.mobile-nav-open .app-sidebar,
+body.mobile-nav-open.has-app-sidebar > .app-sidebar {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+
+/* Navigation begins at the top of its available area */
+
+.app-sidebar .sidebar-nav {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    gap: 5px !important;
+
+    overflow: visible !important;
+
+    transform: none !important;
+}
+
+
+/* Every menu item has a fixed normal height */
+
+.app-sidebar .sidebar-link {
+    position: relative !important;
+
+    flex: 0 0 44px !important;
+
+    width: 100% !important;
+    height: 44px !important;
+
+    min-height: 44px !important;
+    max-height: 44px !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   REGISTRAR ALL PAGES - TOP BAR FIX
+========================================= */
+
+/* Push ALL registrar content below fixed top bar */
+body[data-role="registrar"].has-app-sidebar .layout > main.main {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: 0 !important;
+
+    /* Mobile top bar is around 68px tall */
+    padding-top: 92px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    padding-bottom: 30px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Every registrar panel starts below the top bar */
+body[data-role="registrar"] main.main > section[data-panel] {
+    position: relative !important;
+
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    scroll-margin-top: 92px;
+
+    visibility: visible;
+}
+
+
+/* Keep hidden pages hidden */
+body[data-role="registrar"] main.main > section[data-panel].hidden {
+    display: none !important;
+}
+
+
+/* Make the heading of every visible panel show properly */
+body[data-role="registrar"]
+main.main > section[data-panel]:not(.hidden) > h1:first-child,
+
+body[data-role="registrar"]
+main.main > section[data-panel]:not(.hidden) > h2:first-child,
+
+body[data-role="registrar"]
+main.main > section[data-panel]:not(.hidden) > .page-title:first-child {
+
+    display: block !important;
+
+    position: relative !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    z-index: 1 !important;
+}
+
 }

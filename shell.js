@@ -101,7 +101,7 @@ function openMobileMenu() {
     menuButton.setAttribute(
         'aria-expanded',
         'true'
-    )
+    );
 
     /* Always open sidebar at the first menu item */
     sidebar.scrollTop = 0
@@ -112,6 +112,15 @@ function openMobileMenu() {
     if (sidebarNav) {
         sidebarNav.scrollTop = 0
     }
+
+    /* Run once more after layout finishes */
+    requestAnimationFrame(() => {
+        sidebar.scrollTop = 0;
+
+        if (sidebarNav) {
+            sidebarNav.scrollTop = 0;
+        }
+    });
 }
 
 
